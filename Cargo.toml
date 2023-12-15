@@ -1,0 +1,25 @@
+[package]
+name = "block-builder"
+version = "0.1.0"
+edition = "2021"
+readme = "README.md"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+
+[dependencies]
+codec = { package = "parity-scale-codec", version = "3.6.1", features = [
+	"derive",
+] }
+sp-api = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-block-builder = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-blockchain = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-core = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-inherents = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-runtime = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+sp-trie = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+
+[dev-dependencies]
+sp-state-machine = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+substrate-test-runtime-client = { git = "https://github.com/paritytech/polkadot-sdk", branch = "master" }
+
